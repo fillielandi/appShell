@@ -1,0 +1,16 @@
+E:
+cd xampp
+cd mysql
+cd bin
+
+
+mysqldump -u root -p applicationshell > myBackup.sql
+
+mysql -u root -p applicationshell < myBackup.sql
+
+bin> mysql -h localhost -u root
+
+
+
+
+mysqldump -u root -p appshell > appshell.sql

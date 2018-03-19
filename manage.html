@@ -1,0 +1,68 @@
+<section id="manage" style="display: none">
+	<div class="container page">
+		<h1>Manage Account</h1>
+		<p>Manage your account here</p>
+		<form role="form" data-toggle="validator" id="manageAccountForm">
+		    <div class="form-group">
+		    	<label for="manageAccountUsername">Username:</label>
+		    	<input type="text" class="form-control" id="manageAccountUsername" required>
+		    	<div class="help-block with-errors"></div>
+		    </div>
+		    <div class="form-group">
+		    	<label for="manageAccountemail">Email:</label>
+		    	<input type="text" class="form-control" id="manageAccountEmail" placeholder="Update Email Address" required>
+		    	<div class="help-block with-errors"></div>
+			</div>
+			<div class="form-group">
+		    	<label for="manageAccountName">Name:</label>
+		    	<input type="text" class="form-control" id="manageAccountName" placeholder="Update Name" required>
+		    	<div class="help-block with-errors"></div>
+		    </div>
+
+			<!-- Change Password -->
+			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#changePassword">Change Password</button>
+			<!-- Modal -->
+			<div class="modal fade" id="changePassword" role="dialog" style="display: none">
+				<div class="modal-dialog">
+		      	<!-- Modal content-->
+		      	<div class="modal-content">
+		        	<div class="modal-header">
+		          		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		          		<h4 class="modal-title">Change Password</h4>
+		        	</div>
+		        	<div class="modal-body">
+		        		<!-- New form for pwd update-->
+		          		<p>Change your password</p>
+		          		<form role="form" data-toggle="validator" id="updatePasswordForm">
+		          			<div class="form-group">
+		      					<label for="updatePasswordUsername">Username:</label>
+		      					<input type="text" class="form-control" id="updateUsername" placeholder=""  data-minlength="6" required>
+		    				</div>
+		          			<div class="form-group">
+		      					<label for="oldPassword">Old Password:</label>
+		      					<input type="password" class="form-control" id="oldPassword" placeholder="Old Password"  data-minlength="6" required>
+		    				</div>
+		          			<div class="form-group">
+		      					<label for="updatePassword">Password:</label>
+		      					<input type="password" class="form-control" id="updatePassword" placeholder="Update Password"  data-minlength="6" required>
+		      					<div class="help-block with-errors">Minimum of 6 characters</div>
+		    				</div>
+		    				<div class="form-group">
+		      					<label for="updatePassword">Confirm New Password:</label>
+		      					<input type="password" class="form-control" id="updateConfirmPassword" placeholder="Verify Password" data-match="#updatePassword" data-match-error="Dude, your passwords do not match" required>
+		      					<div class="help-block with-errors"></div>
+		    				</div>
+		    				<button type="button" class="btn btn-default" id="updateBtn">Update</button>
+		  				</form>
+		        	</div>
+		        	<div class="modal-footer">
+		         		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        		<br><br>
+		        	</div>
+		   		</div> 
+		    	</div>
+			</div>
+		    <button type="submit" id="manageAccountButton" class="btn btn-default">Update Account Info</button>
+		</form>
+	</div>
+</section>

@@ -1,0 +1,17 @@
+function getCookie(cName){
+	if(document.cookie){
+		var cookie = document.cookie.split("; ");
+		for(var i = 0; i < cookie.length; i++){
+			if(cookie[i].split("=")[0] == cName){
+				return unescape(cookie[i].split("=")[1]);
+			}
+		}
+	}
+}
+
+function setCookie(cname, cvalue, exdays){
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	var expires = "expires= " + d.toGMTString();
+	//alert(cname + " " + )
+}    

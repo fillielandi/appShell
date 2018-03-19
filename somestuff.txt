@@ -1,0 +1,32 @@
+			success:	function(data){
+				
+							if(parseInt(data) == 0) { // error
+							 	alert(data.split(".")[1]);
+							} else if {
+								alert("Invalid username and password combination!");
+							} else { // success round trip- does not mean success login - this needs to be in sync with the php file
+							 	data = $.parseJSON(data);
+							 	currentUser = data.user;
+							 	$("#loggedInUserName").html("Hello " + data.user[0].username);
+
+							 	//
+							 	if(parseInt(data) == 1) { // successful login
+								 	$("#loggedInUserName").html("Hello " + $("#loginUsername").val());
+								 	showMenuBasedOnLogin(true);
+								 	$("#homeNavItem").click();
+								} else {
+									alert("Invalid username and password combination!");
+									//alert(data);
+								}
+							}
+							//console.log(data);
+						},
+
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+	if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		var resp = xmlhttp.responseText; //return values go here
+
+	}
+}
